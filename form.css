@@ -117,3 +117,7 @@
     margin-bottom: -15%;
     color: #495057;
 }
+
+.error-message {
+    color: red;
+}

@@ -16,109 +16,185 @@
     <div class="row">
         <div class="col-md-3 register-left">
             <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
-            <h3>Welcome</h3>
-            <p>You are 30 seconds away from earning your own money!</p>
-            <input type="submit" name="" value="Login" /><br />
+            <h3>Bienvenido</h3>
+            <p>Si quieres conocer más información, llena tus datos personales y envía tu mensaje!</p>
+            <!-- <input type="submit" name="" value="Login" /><br /> -->
         </div>
         <div class="col-md-9 register-right">
-            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Employee</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Hirer</a>
-                </li>
-            </ul>
+
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <h3 class="register-heading">Apply as a Employee</h3>
+                    <h3 class="register-heading">Contactar</h3>
                     <div class="row register-form">
-                        <div class="col-md-6">
+                        <div class="col-md-10">
+  
+                            
+                            
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombre *" value="" />
+                                <span id="error-nombre" class="error-message"></span>
                             </div>
+                            
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                <input type="text" class="form-control" placeholder="Apellido *" value="" id="apellido" required />
+                                <span id="error-apellido" class="error-message"></span>
                             </div>
+                            
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <div class="maxl">
-                                    <label class="radio inline">
-                                        <input type="radio" name="gender" value="male" checked>
-                                        <span> Male </span>
-                                    </label>
-                                    <label class="radio inline">
-                                        <input type="radio" name="gender" value="female">
-                                        <span>Female </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Email *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option class="hidden" selected disabled>Please select your Sequrity Question</option>
-                                    <option>What is your Birthdate?</option>
-                                    <option>What is Your old Phone Number</option>
-                                    <option>What is your Pet Name?</option>
+                                <select class="form-control" id="tipoDocumento" required>
+                                    <option class="hidden" selected disabled>Selecciona tipo documento</option>
+                                    <option>cedula de ciudadania</option>
+                                    <option>cedula de extranjeria</option>
+                                    <option>Pasaporte</option>
+                                    <option>Tarjeta de identidad</option>
                                 </select>
+                                <span id="error-tipoDocumento" class="error-message"></span>
                             </div>
+                            
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" />
+                                <input type="text" class="form-control" placeholder="ID *" value="" id="id" required />
+                                <span id="error-id" class="error-message"></span>
                             </div>
-                            <input type="submit" class="btnRegister" value="Register" />
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <h3 class="register-heading">Apply as a Hirer</h3>
-                    <div class="row register-form">
-                        <div class="col-md-6">
+                            
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Teléfono *" value="" id="telefono" required />
+                                <span id="error-telefono" class="error-message"></span>
                             </div>
+                            
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                <input type="email" class="form-control" placeholder="Email *" value="" id="email" required />
+                                <span id="error-email" class="error-message"></span>
                             </div>
+                            
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email *" value="" />
+                                <input type="text" class="form-control" placeholder="Profesión *" value="" id="profesion" required />
+                                <span id="error-profesion" class="error-message"></span>
                             </div>
+                            
                             <div class="form-group">
-                                <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
-                            </div>
-
-
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option class="hidden" selected disabled>Please select your Sequrity Question</option>
-                                    <option>What is your Birthdate?</option>
-                                    <option>What is Your old Phone Number</option>
-                                    <option>What is your Pet Name?</option>
+                                <select class="form-control" id="rol" required>
+                                    <option class="hidden" selected disabled>Selecciona el rol</option>
+                                    <option>admin</option>
+                                    <option>viewer</option>
+                                    <option>executor</option>
+                                    <option>guest</option>
                                 </select>
+                                <span id="error-rol" class="error-message"></span>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="`Answer *" value="" />
-                            </div>
-                            <input type="submit" class="btnRegister" value="Register" />
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <input type="submit" class="btnRegister" value="Enviar" onclick="validarCampos()" />
+                            <script>
+                                function enviarDatos(jsonData) 
+                                {
+                                    var url = "http://localhost:8000/api/usuario/create";
+                                    var xhr = new XMLHttpRequest();
+
+                                    xhr.open("POST", url, true);
+                                    xhr.setRequestHeader("Content-Type", "application/json");
+
+                                    xhr.onreadystatechange = function () {
+                                        if (xhr.readyState === 4 && xhr.status === 200) {
+                                            console.log("Datos enviados correctamente");
+                                        }
+                                    };
+                                xhr.send(JSON.stringify(jsonData));
+                                }
+
+                               function validarCampos() 
+                               {
+
+                                        var camposValidos = true;
+                                        var nombre = document.getElementById("nombre").value;
+                                        var apellido = document.getElementById("apellido").value;
+                                        var tipoDocumentoElement = document.getElementById("tipoDocumento");
+                                        var tipoDocumento = tipoDocumentoElement.options[tipoDocumentoElement.selectedIndex].value;
+                                        var id = document.getElementById("id").value;                  
+                                        var telefono = document.getElementById("telefono").value;
+                                        var email = document.getElementById("email").value;
+                                        var profesion = document.getElementById("profesion").value;
+                                        var rolElement = document.getElementById("rol");
+                                        var rol = rolElement.options[rolElement.selectedIndex].value;
+
+                                        if (nombre === "") {
+                                            document.getElementById("error-nombre").textContent = "Por favor, ingrese su nombre.";
+                                            camposValidos = false;
+                                        } else {
+                                            document.getElementById("error-nombre").textContent = "";
+                                        }
+
+                                        if (apellido === "") {
+                                            document.getElementById("error-apellido").textContent = "Por favor, ingrese su apellido.";
+                                            camposValidos = false;
+                                        } else {
+                                            document.getElementById("error-apellido").textContent = "";
+                                        }
+
+                                        if (tipoDocumento === "Selecciona tipo documento") {
+                                            document.getElementById("error-tipoDocumento").textContent = "Por favor, seleccione un tipo de documento.";
+                                            camposValidos = false;
+                                        } else {
+                                            document.getElementById("error-tipoDocumento").textContent = "";
+                                        }
+
+                                        if (id === "") {
+                                            document.getElementById("error-id").textContent = "Por favor, ingrese su ID.";
+                                            camposValidos = false;
+                                        } else {
+                                            document.getElementById("error-id").textContent = "";
+                                        }
+
+                                        if (telefono === "") {
+                                            document.getElementById("error-telefono").textContent = "Por favor, ingrese su teléfono.";
+                                            camposValidos = false;
+                                        } else {
+                                            document.getElementById("error-telefono").textContent = "";
+                                        }
+
+                                        if (email === "") {
+                                            document.getElementById("error-email").textContent = "Por favor, ingrese su email.";
+                                            camposValidos = false;
+                                        } else {
+                                            document.getElementById("error-email").textContent = "";
+                                        }
+
+                                        if (profesion === "") {
+                                            document.getElementById("error-profesion").textContent = "Por favor, ingrese su profesión.";
+                                            camposValidos = false;
+                                        } else {
+                                            document.getElementById("error-profesion").textContent = "";
+                                        }
+
+                                        if (rol === "Selecciona el rol") {
+                                            document.getElementById("error-rol").textContent = "Por favor, seleccione un rol.";
+                                            camposValidos = false;
+                                        } else {
+                                            document.getElementById("error-rol").textContent = "";
+                                        }
+                                        
+                                        if (camposValidos) {
+                                            var jsonData = {
+                                                "name": nombre,
+                                                "last_name": apellido,
+                                                "id_type": tipoDocumento,
+                                                "id_card": id,
+                                                "phone": telefono,
+                                                "email": email,
+                                                "profession": profesion,
+                                                "role": rol
+                                            };
+
+                                        // Aquí puedes hacer lo que necesites con el objeto jsonData, como enviarlo a un servidor o almacenarlo en el localStorage
+
+                                        console.log(jsonData); 
+                                        enviarDatos(jsonData);
+                                    return true; // Envía el formulario si todos los campos son válidos
+                                    } else {
+                                    return false; // Evita enviar el formulario si hay campos inválidos
+                                    }
+                                 }
+                            </script>
                         </div>
                     </div>
                 </div>
