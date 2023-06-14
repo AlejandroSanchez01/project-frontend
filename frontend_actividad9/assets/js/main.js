@@ -333,6 +333,7 @@ function validarCampos()
         } else {
           if (telefono.length !== 10) {
               document.getElementById("error-telefono").textContent = "El número debe contener 10 caracteres"; 
+              camposValidos = false;
             }
             else{
               document.getElementById("error-telefono").textContent = "";
@@ -348,6 +349,7 @@ function validarCampos()
           // Comprobar si la cadena coincide con la expresión regular
           if (!expresionRegular.test(email)) {
             document.getElementById("error-email").textContent = "Verifique que sea un correo valido !";
+            camposValidos = false;
           }
           else{
             document.getElementById("error-email").textContent = "";
